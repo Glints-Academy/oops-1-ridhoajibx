@@ -13,17 +13,15 @@ class Student extends Person {
     public void addCourseGrades(String course, int grade) {
         grades[0] = grade;
         courses[0] = course;
-        System.out.println(this.name + " has a " + course + " class at grades " + grade);
+        System.out.println("Course: " + course + "\nGrades: " + grade);
 
     }
 
     public void printGrade() {
         if (grades.length > 0) {
             for (int i = 0; i < grades.length; i++) {
-                System.out.println(grades[i]);
+                System.out.println("Student grades: " + grades[i]);
             }
-        } else {
-            System.out.println("Student dont have any grades!");
         }
     }
 
@@ -48,7 +46,7 @@ class Student extends Person {
         return total;
     }
 
-    public String toString () {
-		return "Student: " + name +" live "+ address;
-	}
+    public String toString() {
+        return "Student: " + name + "\nStay: " + address;
+    }
 }

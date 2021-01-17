@@ -1,6 +1,6 @@
 public class Teacher extends Person {
     int numCourse = 0;
-    String[] courses = {"Java", "Laravel"};
+    String[] courses = new String[3];
 
     public Teacher(String name, String address) {
         super(name, address);
@@ -9,15 +9,15 @@ public class Teacher extends Person {
     }
 
     public boolean addCourse(String course) {
-        boolean result = true; 
-        for (int i = 0; i < courses.length; i++) {
-            if(courses[i] == course){
-                result =  false;
-                System.out.println("course has been added before!");
-            } else {
-                courses[i] = course;
-                result = true;
-                System.out.println("he is teaching " + courses[i] + " class.");
+        boolean result = true;
+        if (courses.length > 0) {
+            for (int i = 0; i < courses.length; i++) {
+                if (courses[i] == course) {
+                    result = false;
+                } else {
+                    courses[i] = course;
+                    result = true;
+                }
             }
         }
         return result;
@@ -25,21 +25,15 @@ public class Teacher extends Person {
 
     public boolean removeCourse(String course) {
         boolean result = true;
-        
         for (int i = 0; i < courses.length; i++) {
-            if(courses[i] == course){
-                result =  true;
-                System.out.println("course has been deleted!");
-            } else {
+            if ( course == courses[i]) {
                 result = false;
-                System.out.println("he hasn't " + course + " class.");
             }
         }
-
         return result;
     }
 
-    public String toString () {
-		return "Teacher: " + name +" live "+ address;
-	}
+    public String toString() {
+        return "Teacher: " + name + "\nStay: " + address;
+    }
 }
