@@ -18,8 +18,8 @@ public class Person {
         student.getAverageGrade();
 		
         Teacher teacher = new Teacher("Alhafiz Putra", "Batam");
-        System.out.println(teacher.addCourse("Java"));
-        System.out.println(teacher.removeCourse("React JS"));
+        teacher.addCourse("Java");
+        teacher.removeCourse("React JS");
 	}
 	
 	public void getName() {

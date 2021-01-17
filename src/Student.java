@@ -28,7 +28,7 @@ class Student extends Person {
         }
     }
 
-    public void getAverageGrade() {
+    public double getAverageGrade() {
         double total = 0, avg;
 
         for (int i = 0; i < 1; i++) {
@@ -46,5 +46,6 @@ class Student extends Person {
         } else {
             System.out.println("D");
         }
+        return total;
     }
 }
