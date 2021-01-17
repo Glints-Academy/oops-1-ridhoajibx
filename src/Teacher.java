@@ -6,7 +6,6 @@ public class Teacher extends Person {
         super(name, address);
         this.name = name;
         this.address = address;
-        System.out.println("teacher name is: " + name + ", Address: " + address);
     }
 
     public boolean addCourse(String course) {
@@ -39,4 +38,8 @@ public class Teacher extends Person {
 
         return result;
     }
+
+    public String toString () {
+		return "Teacher: " + name +" live "+ address;
+	}
 }

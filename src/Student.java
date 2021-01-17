@@ -8,7 +8,6 @@ class Student extends Person {
         super(name, address);
         this.name = name;
         this.address = address;
-        System.out.println("Student name is: " + name + ", Address: " + address);
     }
 
     public void addCourseGrades(String course, int grade) {
@@ -48,4 +47,8 @@ class Student extends Person {
         }
         return total;
     }
+
+    public String toString () {
+		return "Student: " + name +" live "+ address;
+	}
 }
