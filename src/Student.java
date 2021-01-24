@@ -1,4 +1,3 @@
-
 class Student extends Person {
     int numCourse = 0;
     int[] grades = new int[1];
@@ -8,27 +7,24 @@ class Student extends Person {
         super(name, address);
         this.name = name;
         this.address = address;
-        System.out.println("Student name is: " + name + ", Address: " + address);
     }
 
     public void addCourseGrades(String course, int grade) {
         grades[0] = grade;
         courses[0] = course;
-        System.out.println(this.name + " has a " + course + " class at grades " + grade);
+        System.out.println("Course: " + course + "\nGrades: " + grade);
 
     }
 
     public void printGrade() {
         if (grades.length > 0) {
             for (int i = 0; i < grades.length; i++) {
-                System.out.println(grades[i]);
+                System.out.println("Student grades: " + grades[i]);
             }
-        } else {
-            System.out.println("Student dont have any grades!");
         }
     }
 
-    public void getAverageGrade() {
+    public double getAverageGrade() {
         double total = 0, avg;
 
         for (int i = 0; i < 1; i++) {
@@ -46,5 +42,10 @@ class Student extends Person {
         } else {
             System.out.println("D");
         }
+        return total;
+    }
+
+    public String toString() {
+        return "Student: " + name + "\nStay: " + address;
     }
 }
